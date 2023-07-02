@@ -7,17 +7,19 @@
 #include <QStackedWidget>
 #include <QDebug>
 #include <QPushButton>
+#include <QFormLayout>
 
 #include "controller/abstract_controller.h"
 
-class MainWindow : QWidget {
+class MainWindow : public QWidget {
   Q_OBJECT
  public:
   explicit MainWindow(std::shared_ptr<AbstractController> controller,
                       QWidget* parent = nullptr);
   ~MainWindow() override = default;
 
-  // void TranslateButtonOnClick();
+  void UpdateButtonClickedHandle();
+  void HelloButtonClickedHandle();
 
  private:
   void SetGraphics();
@@ -27,6 +29,9 @@ class MainWindow : QWidget {
   QLabel* plus_label_;
   QLabel* minus_label_;
   QPushButton* update_button_;
+  QPushButton* hello_button_;
+
+  QVBoxLayout* layout_;
 
   std::shared_ptr<AbstractController> controller_;
 };

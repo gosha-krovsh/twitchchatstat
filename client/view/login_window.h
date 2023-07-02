@@ -24,6 +24,7 @@ class LoginWindow : public QWidget {
   void SetUI();
 
   QPushButton* login_button_;
+  QHBoxLayout* layout_;
 
   std::shared_ptr<AbstractController> controller_;
 };

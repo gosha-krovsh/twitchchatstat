@@ -10,6 +10,9 @@
 
 #include "controller/abstract_controller.h"
 
+#include "view/login_window.h"
+#include "view/main_window.h"
+
 class View : public QMainWindow {
  Q_OBJECT
  public:
@@ -17,13 +20,14 @@ class View : public QMainWindow {
                 QWidget* parent = nullptr);
   ~View() override = default;
 
+  void SetMainScreen();
+
  private:
   void setGraphics();
   void setUi();
-  void resizeEvent(QResizeEvent*) override;
 
-  QWidget* main_window_;
-  QWidget* login_window_;
+  LoginWindow* login_window_;
+  MainWindow* main_window_;
 
   QStackedWidget* stacked_widget_{};
 
