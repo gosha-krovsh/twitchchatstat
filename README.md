@@ -1,6 +1,6 @@
-# TwitchChatStat
+# Twitch Chat Statistics
 
-This application is a client<->server demo, that can access some statistics from Twitch API.
+Twitch Chat Statistics is an application, that can be usefull to monitor twitch in-chat activity online during streams. It includes both a client and a server. Webhooks are used on the server side for the fastest responce during online streaming process.
 
 ## Set up
 1) Update CMakelists.txt with you Qt
